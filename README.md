@@ -1,2 +1,1 @@
-# leap-hugo-theme
-LEAP - theme for hugo websites
+# LEAP - theme for hugo websites
