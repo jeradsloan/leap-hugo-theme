@@ -1,0 +1,29 @@
+<!-- 
+    TAKEN FROM home-mobile-app.html
+    in LEAP template
+ -->
+<section class="bg-primary-alt">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h4>
+                    <a href="https://www.kickstarter.com/projects/storydivision/its-not-a-race-the-scooter-cannonball-run-movie"><img class="text-light" src="/assets/img/logos/brand/Kickstarter_logo_light.svg" height="25" alt="Kickstarter"></a>
+                </h4>
+                <small class="text-uppercase">thanks to all of our backers who made this film possible</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul class="d-flex flex-wrap justify-content-center list-unstyled">
+                    {{ range .Site.Params.kickstarter.backernames }}
+                    <li class="mx-1 mb-1" data-aos="fade-up">
+                        <span class="opacity-40">
+                            {{ .name }}
+                        </span>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,132 @@
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="movies are better than video games">
+    <!-- <link href="assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" /> -->
+    <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" /> -->
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        /* style params set -- pulled from HUGO-PROFILE */
+        :root {
+            --text-color: {{ .Site.Params.color.textColor | default "#343a40" }};
+            --text-secondary-color: {{ .Site.Params.color.secondaryTextColor | default "#6c757d" }};
+            --background-color: {{ .Site.Params.color.backgroundColor | default "#eaedf0" }};
+            --secondary-background-color: {{ .Site.Params.color.secondaryBackgroundColor | default "#64ffda1a" }};
+            --primary-color: {{ .Site.Params.color.primaryColor | default "#007bff" }};
+            --secondary-color: {{ .Site.Params.color.secondaryColor | default "#f8f9fa" }};
+
+            /* dark mode colors */
+            --text-color-dark: {{ .Site.Params.color.darkmode.textColor | default "#e4e6eb" }};
+            --text-secondary-color-dark: {{ .Site.Params.color.darkmode.secondaryTextColor | default "#b0b3b8" }};
+            --background-color-dark: {{ .Site.Params.color.darkmode.backgroundColor | default "#18191a" }};
+            --secondary-background-color-dark: {{ .Site.Params.color.darkmode.secondaryBackgroundColor | default "#212529" }};
+            --primary-color-dark: {{ .Site.Params.color.darkmode.primaryColor | default "#ffffff" }};
+            --secondary-color-dark: {{ .Site.Params.color.darkmode.secondaryColor | default "#212529" }};
+        }
+        body {
+            font-size: {{ .Site.Params.font.fontSize | default "1rem" }};
+            font-weight: {{ .Site.Params.font.fontWeight | default "400" }};
+            line-height: {{ .Site.Params.font.lineHeight | default "1.5" }};
+            text-align: {{ .Site.Params.font.textAlign | default "left" }};
+        }
+
+        html {
+            background-color: var(--background-color) !important;
+        }
+
+        body::-webkit-scrollbar {
+            width: .5em;
+            height: .5em;
+            background-color: var(--background-color);
+        }
+        
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px var(--background-color);
+            border-radius: 1rem;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            border-radius: 1rem;
+            background-color: var(--secondary-color);
+            outline: 1px solid var(--background-color);
+        }
+
+        #search-content::-webkit-scrollbar {
+            width: .5em;
+            height: .1em;
+            background-color: var(--background-color);
+        }
+    
+/* JERAD -- DIM the background video */
+        .hero-video-background::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            background-color: rgba(0,0,0,0.40);
+        }
+/* CARD styling from HUGO-PROFILE 'achievments'*/
+        #creators a {
+            text-decoration: none;
+        }
+        #creators h3 {
+            color: var(--text-secondary-color) !important;
+        }
+        #creators .card {
+            cursor: context-menu;
+            background-color: var(--secondary-color) !important;
+            border-radius: 1rem;
+            box-shadow: 0 0 36px rgba(0,0,0,0.1);
+            /* transform: translate3d(0, 0, 0); */
+            transition: box-shadow .2s linear,opacity .2s linear;
+            border: 2px solid transparent;
+        }
+        #creators a.card {
+            cursor: alias;
+        }
+        #creators .card {
+            background-color: #47476b
+        }
+/* TEST FIX */
+        #creators .card-body{
+            color: #47476b;
+        }
+        #creators .card h5 {
+            color: var(--text-color) !important;
+            opacity: 0.9;
+/* TEST TITLE TEXT nowrap line break */
+            white-space: nowrap;
+            text-align:center
+        }
+        #creators .card:hover {
+            border: 2px solid var(--text-color);
+            transition: .3s;
+        }
+        #creators .card:focus {
+            border: 2px solid var(--text-color);
+            transition: .3s;
+        }
+        #creators .card-text {
+            background-color: var(--secondary-color) !important;
+            color: var(--text-secondary-color) !important;
+        }
+/* JERAD - logo-list.html -- tweaks to VOD logo section */
+        #logo-list {
+            padding-bottom: 1.5em;
+        }
+        #logo-list h1 {
+            color: #686a6c;
+        }
+
+    </style>
+</head>

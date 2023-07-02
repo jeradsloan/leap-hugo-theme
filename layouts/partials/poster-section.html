@@ -1,0 +1,29 @@
+<!-- POSTER hugo.yaml-Hero.projectPoster and some COPY hugo.yaml-Hero.projectTagline -->
+<section class="bg-primary-3 text-light">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="video-poster rounded layer-2" data-aos="fade-right">
+                    <a data-fancybox href="{{ .Site.Params.Hero.projectTrailer }}">
+                        <picture>
+                            <source srcset="{{ .Site.Params.Hero.projectPoster }}" type="image/webp">
+                            <source srcset="{{ .Site.Params.Hero.projectPosterJPEG }}" type="image/jpeg">
+                            <img src="img/creakyOldJPEG.jpg" alt="watch the {{ .Site.Params.Hero.projectTitle }} trailer">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 article" data-aos="fade">
+                <blockquote class="blockquote">
+                    <h1>{{ .Site.Params.Hero.projectTitle }}</h1>
+                        <p class="lead"><span style="font-style:italic;"><em>
+                            {{ .Site.Params.Hero.projectTagline }}
+                        </em></style></p>
+                    <h3>
+                        {{ .Site.Params.Hero.projectDescription }}
+                    </h3>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
