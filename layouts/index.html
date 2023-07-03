@@ -19,7 +19,9 @@
             <div class="row">
                 <div class="col">
                     <!-- <h1 class="display-3">{{ $.Site.Params.hero.projecttitle }}</h1> -->
-                    <h1 class="display-3">{{ $.Site.Params.hero.projecttagline}}</h1>
+                    {{- .Scratch.Set "heroTag" (replace $.Site.Params.hero.projecttagline "  " "<br>") -}}
+                    <h1 class="display-3">{{ safeHTML (.Scratch.Get "heroTag")}}</h1>
+
                     <div class="my-4">
                         <p class="lead">{{ $.Site.Params.hero.projectdescription}}</p>
                     </div>
