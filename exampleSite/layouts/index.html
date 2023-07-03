@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <!-- head.html partial -->
+    {{- partial "head.html" . -}}
+<body>
+    <div class="loader">
+        <div class="loading-animation"></div>
+    </div>
+<!-- header.html partial navbar header -->
+{{- partial "header.html" . -}}
+
+{{if $.Site.Params.hero.videoBackgroundMP4}}
+    <section class="bg-primary-3 text-light opacity-75 jarallax hero-video-background" disableParallax="iPhone"
+        data-jarallax-video="{{ $.Site.Params.hero.videobackgroundMP4 }}">
+{{else}}
+    <section class="bg-primary-3 text-light">
+{{end}}
+        <div class="container mt-lg-6">
+            <div class="row">
+                <div class="col">
+                    <!-- <h1 class="display-3">{{ $.Site.Params.hero.projecttitle }}</h1> -->
+                    <h1 class="display-3">3,573 Miles.<br> 22 Riders.<br> 10 Days.</h1>
+                    <div class="my-4">
+                        <p class="lead">{{ $.Site.Params.hero.projecttagline}}</p>
+                    </div>
+                    {{if $.Site.Params.hero.projectTrailer}}
+                    <a class="btn btn-lg btn-primary" data-fancybox href="{{ $.Site.Params.hero.projectTrailer }}">watch trailer</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- LOGO LIST - linkable VOD section -->
+    {{- partial "logo-list.html" . -}}
+
+    <!-- POSTER section -->
+    {{- partial "poster-section.html" . -}}
+
+
+    <!-- KICKSTARTER backers -->
+    {{- partial "kickstarter.html" . -}}
+
+    <!-- EMBED VIDEO TRAILER section -->
+    {{- partial "video-embed.html" . -}}
+
+    <!-- VIDEO PLAYER with Still and Play button section -->
+    <!-- {{- partial "video-play-background-still.html" . -}} -->
+
+    <!-- LOGO LIST section -->
+    <!-- {{- partial "logo-list.html" . -}} -->
+
+    <!-- CREATORS section -->
+    {{- partial "creators-cards.html" . -}}
+    <!-- {{- partial "creators.html" . -}} -->
+
+    <!-- PORTFOLIO LAYOUT section with default content -->
+    <!-- {{- partial "portfolio-layout.html" . -}} -->
+
+    <!-- FOOTER partial -->
+    {{- partial "footer.html" . -}}
+
+    <!-- scripts -->
+    {{- partial "script.html" . -}}
+</body>
+</html>

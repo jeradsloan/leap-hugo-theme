@@ -1,0 +1,26 @@
+<!-- CREATORS section -- CAST AND CREW -->
+<div id="castandcrew"></div>
+<section class="bg-primary-alt">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-xl-6">
+                <h1 class="display-5">{{ .Site.Params.creators.title}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            {{ range .Site.Params.creators.items }}
+            <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">        
+                <a href="{{ .url | default ""}}" class="card card-body hover-shadow-3d">
+                    <div class="mb-3 mb-md-5">
+                        <img src="{{ .image | default  }}" loading="lazy" alt="{{ .title | default ""}}" class="rounded"/>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">{{ .title | default ""}}</h5>
+                        <span>{{ .content | default ""}}</span>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

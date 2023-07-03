@@ -1,0 +1,122 @@
+<!-- START OF COMMENTING OUT THIS FOOTER -->
+<script>/*
+<footer class="pb-5 bg-primary-3 text-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col">
+                <ul class="nav align-bottom">
+                {{ range $.Site.Params.socialAccounts }}
+                        <li class="nav-item">
+                            <a class="dropdown-item fade-page" href="{{ .service }}/{{ .profilename }}" title="{{ .Service }}">
+                                <img class="icon " src="assets/img/icons/social/{{ .service }}.svg" alt="instagram social icon" data-inject-svg />
+                            </a>
+                        </li>
+                {{ end }}
+                </ul>
+            </div>
+            <div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">
+                <h5>Subscribe</h5>
+                <p>Story Division news, articles, and stories, sent straight to your inbox. Rarely. Like hardly ever.</p>
+                <form action="/forms/mailchimp.php" data-form-email novalidate>
+                    <div class="form-row">
+                        <div class="col-12">
+                            <input type="email" class="form-control mb-2" placeholder="Email Address" name="email" required>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-none alert alert-success" role="alert" data-success-message>
+                                Thanks, a member of our team will be in touch shortly.
+                            </div>
+                            <div class="d-none alert alert-danger" role="alert" data-error-message>
+                                Please fill all fields correctly.
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-loading btn-block" data-loading-text="Sending">
+                                <img class="icon" src="assets/img/icons/theme/code/loading.svg" alt="loading icon"
+                                    data-inject-svg />
+                                <span>Subscribe</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <small class="text-muted form-text">
+                    We’ll never share your details. 
+                    <!-- See our <a href="#">Privacy Policy</a> -->
+                </small>
+            
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-md-auto text-center">
+                <small class="text-muted">
+                    <a href="https://storydivision.com/"><img src="images/story-division_100x100.png" width=40 alt="Story Division"></a><br>
+                    &copy;2012-2023 {{ .Site.Copyright }} 
+                    <!-- <a href="https://www.google.com/policies/privacy/">Privacy Policy</a> 
+                    and 
+                    <a href="https://policies.google.com/terms">Terms of Service.</a> -->
+                </small>
+            </div>
+        </div>
+    </div>
+</footer> 
+* /</script>
+<!-- END OF COMMENTING OUT THIS FOOTER -->
+
+<footer class=" bg-primary-3">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col d-flex flex-column align-items-center align-items-md-start">
+                <a href="/">
+                    <img src="{{ $.Site.Params.siteLogo}}" alt="{{ $.Site.Title}}" height="100" class="bg-primary-3">
+                </a>
+                <ul class="nav align-bottom">
+                    {{ range $.Site.Params.socialAccounts }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ .profileURL }}" title="@{{ .profileURL }} on {{ .service }}">
+                            <img class="icon" src="assets/img/icons/social/{{ .service }}.svg" alt="@{{ .profileName }} on {{ .service }}"
+                                data-inject-svg />
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="col-lg-5 col-md-6 mt-3 mt-lg-0">
+                <p class="text-light">Subscribe to receive Story Division news, articles, and stories, sent straight to your inbox.</p>
+                <form action="https://storydivision.us21.list-manage.com/subscribe/post?u=2f2e4c12b02991bdba87e6dc1&amp;id=245fc6bf5b&amp;f_id=005d95e1f0"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+                    <div class="form-row flex-column flex-md-row">
+                        <div class="col">
+                            <input type="email" class="form-control mb-2 required email"  id="mce-EMAIL" placeholder="Email Address" name="EMAIL"
+                                required>
+                        </div>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                name="b_2f2e4c12b02991bdba87e6dc1_245fc6bf5b" tabindex="-1" value=""></div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary btn-loading btn-block"
+                                data-loading-text="Sending">
+                                <img class="icon" src="assets/img/icons/theme/code/loading.svg" alt="loading icon"
+                                    data-inject-svg />
+                                <span>Subscribe</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <small class="text-muted form-text">We’ll never share your details. 
+                    <!-- See our <a href="#">Privacy Policy</a> -->
+                </small>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-md-auto text-center">
+                <small class="text-muted text-info">
+                    <a href="{{ .Site.Params.copyrightURL }}" class="text-decoration-none text-secondary">
+                            <img src="{{ .Site.Params.copyrightLogo }}" class="icon icon-lg opacity-70" alt="{{ .Site.Copyright }}">
+                    </a><br>
+                    <!-- &copy;2012-2023 <a href="{{ .Site.Params.copyrightURL }}">{{ .Site.Copyright }}</a> -->
+                    &copy;2012-2023 {{ .Site.Copyright }}
+                    <!-- <a href="https://www.google.com/policies/privacy/">Privacy Policy</a> 
+                            and 
+                            <a href="https://policies.google.com/terms">Terms of Service.</a> -->
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
