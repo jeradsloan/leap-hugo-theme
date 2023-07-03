@@ -7,7 +7,12 @@
         <div class="row text-center mb-5">
             <div class="col">
                 <h4>
-                    <a href="https://www.kickstarter.com/projects/storydivision/its-not-a-race-the-scooter-cannonball-run-movie"><img class="text-light" src="/assets/img/logos/brand/Kickstarter_logo_light.svg" height="25" alt="Kickstarter"></a>
+                    {{- .Scratch.Set "kickstarter-link" "https://kickstarter.com" }}
+
+                    {{ if isset .Site.Params.kickstarter "link" }}
+                        {{- .Scratch.Set "kickstarter-link" .Site.Params.kickstarter.link }}
+                    {{ end }}
+                        <a href="{{ .Scratch.Get "kickstarter-link" }}"><img class="text-light" src="/assets/img/logos/brand/Kickstarter_logo_light.svg" height="25" alt="Kickstarter"></a>
                 </h4>
                 <small class="text-uppercase">thanks to all of our backers who made this film possible</small>
             </div>
