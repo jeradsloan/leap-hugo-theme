@@ -12,7 +12,7 @@
                     {{ if isset .Site.Params.kickstarter "link" }}
                         {{- .Scratch.Set "kickstarter-link" .Site.Params.kickstarter.link }}
                     {{ end }}
-                        <a href="{{ .Scratch.Get "kickstarter-link" }}"><img class="text-light" src="/assets/img/logos/brand/Kickstarter_logo_light.svg" height="25" alt="Kickstarter"></a>
+                    <a href="{{ .Scratch.Get "kickstarter-link" }}"><img class="text-light" src="/assets/img/logos/brand/Kickstarter_logo_light.svg" height="25" alt="Kickstarter"></a>
                 </h4>
                 <small class="text-uppercase">thanks to all of our backers who made this film possible</small>
             </div>
