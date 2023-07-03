@@ -19,9 +19,9 @@
             <div class="row">
                 <div class="col">
                     <!-- <h1 class="display-3">{{ $.Site.Params.hero.projecttitle }}</h1> -->
-                    <h1 class="display-3">3,573 Miles.<br> 22 Riders.<br> 10 Days.</h1>
+                    <h1 class="display-3">{{ $.Site.Params.hero.projecttagline}}</h1>
                     <div class="my-4">
-                        <p class="lead">{{ $.Site.Params.hero.projecttagline}}</p>
+                        <p class="lead">{{ $.Site.Params.hero.projectdescription}}</p>
                     </div>
                     {{if $.Site.Params.hero.projectTrailer}}
                     <a class="btn btn-lg btn-primary" data-fancybox href="{{ $.Site.Params.hero.projectTrailer }}">watch trailer</a>
