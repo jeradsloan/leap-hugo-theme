@@ -36,10 +36,10 @@
     <!-- POSTER section -->
     {{- partial "poster-section.html" . -}}
 
-
+{{ if isset .Site.Params "kickstarter" }}
     <!-- KICKSTARTER backers -->
     {{- partial "kickstarter.html" . -}}
-
+{{ end }}
     <!-- EMBED VIDEO TRAILER section -->
     {{- partial "video-embed.html" . -}}
 
