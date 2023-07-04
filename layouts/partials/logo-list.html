@@ -13,25 +13,13 @@
         <div class="row">
             <div class="col">
                 <ul class="d-flex flex-wrap justify-content-center list-unstyled">
+                {{ range .Site.Params.vodLinks.items }}
                     <li class="mx-4 mb-5 justify-content-center nav-link" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://www.amazon.com/dp/B0B8JQX91L"><img class="icon icon-logo bg-primary-3 icon-md opacity-50"
-                                src="/custom-brand-icons/icon-svg/prime-video.svg" alt="amazon prime video" data-inject-svg /></a>
-                        <a href="https://www.amazon.com/dp/B0B8JQX91L" style="text-decoration: none;color: #212529;">on
-                            amazon</a>
+                        <a href="{{ .link }}"><img class="icon icon-logo bg-primary-3 icon-md opacity-50"
+                                src="{{ .icon }}" alt="{{ .text }}" data-inject-svg /></a>
+                        <a href="{{ .link }}" style="text-decoration: none;color: #212529;">{{ .text }}</a>
                     </li>
-
-                    <li class="mx-4 mb-5 justify-content-center nav-link" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://www.amazon.co.uk/dp/B0B7C1L9ZH"><img class="icon icon-logo bg-primary-3 icon-md opacity-50"
-                                src="/custom-brand-icons/icon-svg/prime-video.svg" alt="amazon prime video UK" data-inject-svg /></a>
-                        <a href="https://www.amazon.co.uk/dp/B0B7C1L9ZH" style="text-decoration: none;color: #212529;">on amazon.co.uk</a>
-                    </li>
-
-                    <li class="mx-4 mb-5 justify-content-center nav-link" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://watch.itsnotaracemovie.xyz/"><img class="icon icon-logo bg-primary-3 icon-md opacity-50"
-                                src="/logos/brands/vimeo_vod_assets_vod_mark.svg" alt="vimeo" data-inject-svg /></a>
-                        <a href="https://watch.itsnotaracemovie.xyz/" style="text-decoration: none;color: #212529;">
-                            vimeo on demand</a>
-                    </li>
+                {{ end }}
                 </ul>
             </div>
         </div>
