@@ -4,7 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="movies are better than video games">
     <!-- <link href="assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+{{ with .Site.Params.color.cssColorSelect  }}
+    <link href="assets/css/theme.{{- .Site.Params.color.cssColorSelect  -}}.css" rel="stylesheet" type="text/css" media="all" />
+{{ else }}
     <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
+{{ end }}
     <!-- <link href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" /> -->
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2"
         crossorigin="anonymous">
@@ -14,14 +19,30 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <style>
+
+/* COLOR tests */
+/*
+ .bg-primary {
+  background-color: #d94446 !important; }
+
+.bg-primary-3 {
+  background-color: #d94446 !important; } 
+*/
+
         /* style params set -- pulled from HUGO-PROFILE */
         :root {
-            --text-color: {{ .Site.Params.color.textColor | default "#343a40" }};
-            --text-secondary-color: {{ .Site.Params.color.secondaryTextColor | default "#6c757d" }};
+            /* COLOR TESTS added july 2023 - jerad */
+            /* 
+            --primary: {{ .Site.Params.color.primaryColor | default "#007bff" }};
+            --primary-2: {{ .Site.Params.color.secondaryColor | default "#f8f9fa" }};
+            --primary-3: {{ .Site.Params.color.tertiaryColor | default "##d94446" }};
+              */
             --background-color: {{ .Site.Params.color.backgroundColor | default "#eaedf0" }};
             --secondary-background-color: {{ .Site.Params.color.secondaryBackgroundColor | default "#64ffda1a" }};
             --primary-color: {{ .Site.Params.color.primaryColor | default "#007bff" }};
             --secondary-color: {{ .Site.Params.color.secondaryColor | default "#f8f9fa" }};
+            --text-color: {{ .Site.Params.color.textColor | default "#343a40" }};
+            --text-secondary-color: {{ .Site.Params.color.secondaryTextColor | default "#6c757d" }};
 
             /* dark mode colors */
             --text-color-dark: {{ .Site.Params.color.darkmode.textColor | default "#e4e6eb" }};
@@ -47,12 +68,12 @@
             height: .5em;
             background-color: var(--background-color);
         }
-        
+
         ::-webkit-scrollbar-track {
             box-shadow: inset 0 0 6px var(--background-color);
             border-radius: 1rem;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             border-radius: 1rem;
             background-color: var(--secondary-color);
@@ -64,7 +85,7 @@
             height: .1em;
             background-color: var(--background-color);
         }
-    
+
 /* JERAD -- DIM the background video */
         .hero-video-background::before {
             position: absolute;
