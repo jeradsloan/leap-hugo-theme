@@ -5,8 +5,8 @@
     <meta name="description" content="movies are better than video games">
     <!-- <link href="assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" /> -->
 
-{{ with .Site.Params.color.cssColorSelect  }}
-    <link href="assets/css/theme.{{- .Site.Params.color.cssColorSelect  -}}.css" rel="stylesheet" type="text/css" media="all" />
+{{ if .Site.Params.color.cssColorSelect }}
+    <link href="assets/css/theme.{{ .Site.Params.color.cssColorSelect }}.css" rel="stylesheet" type="text/css" media="all" />
 {{ else }}
     <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
 {{ end }}
