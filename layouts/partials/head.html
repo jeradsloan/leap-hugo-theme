@@ -149,9 +149,15 @@
             color: #686a6c;
         }
 /* social icons */
-#socials  {
-filter: invert(83%) sepia(1%) saturate(4%) hue-rotate(52deg) brightness(92%) contrast(95%);
 
-}
+#socials  {
+{{- if .Site.Params.color.cssColorSelect }}
+    /* white */
+    filter: invert(98%) sepia(2%) saturate(7478%) hue-rotate(181deg) brightness(113%) contrast(97%);
+{{- else }}
+    /* blue */
+    filter: invert(83%) sepia(1%) saturate(4%) hue-rotate(52deg) brightness(92%) contrast(95%);
+{{- end }}
+        }
     </style>
 </head>
