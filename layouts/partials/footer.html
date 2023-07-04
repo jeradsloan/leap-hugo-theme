@@ -67,7 +67,7 @@
                 <a href="/">
                     <img src="{{ $.Site.Params.siteLogo}}" alt="{{ $.Site.Title}}" height="100" class="bg-primary-3">
                 </a>
-                <ul class="nav align-bottom">
+                <ul class="nav align-bottom" id="socials">
                     {{ range $.Site.Params.socialAccounts }}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ .profileURL }}" title="@{{ .profileURL }} on {{ .service }}">
