@@ -39,10 +39,17 @@
     <!-- POSTER section -->
     {{- partial "poster-section.html" . -}}
 
-{{ if isset .Site.Params "kickstarter" }}
-    <!-- KICKSTARTER backers -->
-    {{- partial "kickstarter.html" . -}}
-{{ end }}
+    {{ if isset .Site.Params "kickstarter" }}
+        <!-- KICKSTARTER backers -->
+        {{- partial "kickstarter.html" . -}}
+    {{ end }}
+
+    {{ if isset .Site.Params.sliderImages "images" }}
+        <!-- SLIDER-IMAGES  -->
+        {{- partial "slider-images.html" . -}}
+    {{ end }}
+
+<!-- TODO: IF THEN condition to include this -->
     <!-- EMBED VIDEO TRAILER section -->
     {{- partial "video-embed.html" . -}}
 
